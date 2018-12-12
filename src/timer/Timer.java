@@ -3,7 +3,7 @@ package timer;
 /**
  * Denne klasse kan starte, stoppe, og finde elapsed time.
  *
- * @author andracs
+ * @author András Ács
  *
  */
 public class Timer {
@@ -20,7 +20,7 @@ public class Timer {
     public static void stop() {
         long stopTimeStamp = System.currentTimeMillis();
         long execTime = stopTimeStamp - startTimeStamp;
-        System.out.println("Exec time: " +  execTime + "ms");
+        System.out.println("\nExec time: " +  execTime + "ms");
     }
 
 
