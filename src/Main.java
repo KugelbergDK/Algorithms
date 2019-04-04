@@ -13,6 +13,7 @@ public class Main {
         int[] liste = {1,5,3,1,0,8,12,58,384,2,59,38,59,69};
         System.out.println(Arrays.toString(liste));
 
+        // DO NOT DELETE THIS
         Timer.start();
 
 
@@ -20,8 +21,9 @@ public class Main {
         int[] sorted = bubbleSort.sorter(liste);
 
 
+        // DO NOT DELETE THIS
         Timer.stop();
-        System.out.println(Arrays.toString(sorted));
+
 
 
     }
