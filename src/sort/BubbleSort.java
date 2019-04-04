@@ -2,28 +2,44 @@ package sort;
 
 import timer.Timer;
 
+import java.util.ArrayList;
 
 
 public class BubbleSort {
 
-    public static void main(String[] args) {
-
+    public static int[] sorter(int[] liste){
 
         Timer.start();
-
-
-        int[] myInts = {234,235,23,34,1,234,5,2,3,5,4,67,5,3,5,7,3,2};
         int myIntTemp;
-
-
         int iter = 0;
-        while (iter < myInts.length){
-            for (int i = 0; i <= myInts.length; i++) {
+        while (iter < liste.length){
+            for (int i = liste.length-1; i > 0; i--) {
+                if (liste[i-1] > liste[i]){
+                    myIntTemp = liste[i - 1];
+                    liste[i - 1] = liste[i];
+                    liste[i] = myIntTemp;
+                }
+            }
+            iter++;
+        }
+        return liste;
+    }
+
+
+
+    /*
+    public static int[] sorter(int[] liste){
+
+        Timer.start();
+        int myIntTemp;
+        int iter = 0;
+        while (iter < liste.length){
+            for (int i = 0; i <= liste.length; i++) {
                 try {
-                    if (myInts[i] >= myInts[i + 1]) {
-                        myIntTemp = myInts[i + 1];
-                        myInts[i + 1] = myInts[i];
-                        myInts[i] = myIntTemp;
+                    if (liste[i] >= liste[i + 1]) {
+                        myIntTemp = liste[i + 1];
+                        liste[i + 1] = liste[i];
+                        liste[i] = myIntTemp;
                     }
                 }
                 catch (ArrayIndexOutOfBoundsException arraysExc){
@@ -32,13 +48,9 @@ public class BubbleSort {
             }
             iter++;
         }
-        for (int myInt: myInts) System.out.print(myInt + ", ");
-
-
-
         Timer.stop();
-
-
-
+        return liste;
     }
+     */
+
 }
