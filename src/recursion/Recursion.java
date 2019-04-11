@@ -1,5 +1,8 @@
 package recursion;
 
+/**
+ * @author lucas og Nicklas Bring
+ */
 public class Recursion {
 
     private static int x2 = 0;
