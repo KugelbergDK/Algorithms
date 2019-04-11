@@ -60,17 +60,17 @@ public class Recursion {
     /**
      * Opgave 5
      */
-    static int before1 = 1;
-    static int before2 = 1;
-    static int res5 = 0;
+    static long before1 = 0;
+    static long before2 = 1;
+    static long res5 = 0;
     public static void fiboNumbers(){
-        if (res5 < 1000){
+        if (res5 < 1000000000){
             res5 = before1+before2;
+            System.out.print(res5 + ", ");
             // Flyt before 1 op til before 2
             before1 = before2;
             // Assign before 2 til res
             before2 = res5;
-            System.out.print(res5 + ", ");
             fiboNumbers();
         }
 
